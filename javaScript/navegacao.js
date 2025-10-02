@@ -125,6 +125,12 @@ reveal_.reveal('.image-profile',
         duration: 2000,
         distance: '40px',
     })
+    reveal_.reveal('.image-profile-mobile',
+    {
+        origin: 'right',
+        duration: 2000,
+        distance: '40px',
+    })
 
 reveal_.reveal('#title',
     {

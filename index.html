@@ -8,6 +8,7 @@
     <script src="./javaScript/modal.js" defer></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+
     <title>Portfólio | Rodrigo Rodrigues</title>
     <!--titulo da aba-->
 
@@ -16,285 +17,287 @@
 </head>
 
 <body>
-    <div id="main">
 
-        <!--cabeçalho-->
-        <header>
-            <div class="hamburguer-menu">
-                <div class="hamburguer-menu-before"></div>
-                <div class="meat"></div>
-                <div class="hamburguer-menu-after"></div>
+
+    <!--cabeçalho-->
+    <header>
+        <div class="hamburguer-menu">
+            <div class="hamburguer-menu-before"></div>
+            <div class="meat"></div>
+            <div class="hamburguer-menu-after"></div>
+        </div>
+        <nav>
+            <div class="portfolio" id="homemenu">
+                <h3>Portfolio</h3>
             </div>
-            <nav>
-                <div class="portfolio" id="homemenu">
-                    <h3>PORTFÓLIO</h3>
-                </div>
-                <!--menu-->
-                <div class="menu">
-                    <a id="aboutmenu">Sobre mim</a>
-                    <a id="skillsmenu">Habilidades</a>
-                    <a id="xpmenu">Qualificação</a>
-                    <a id="projmenu">Projetos</a>
-                </div>
-            </nav>
-        </header>
+            <!--menu-->
+            <div class="menu">
+                <a id="aboutmenu">Sobre mim</a>
+                <a id="skillsmenu">Habilidades</a>
+                <a id="xpmenu">Qualificação</a>
+                <a id="projmenu">Projetos</a>
+            </div>
+        </nav>
+    </header>
 
-        <!-- menu mobile -->
-        <div class="menu-mobile">
-            <a id="aboutmenu-mobile">Sobre mim</a>
-            <a id="skillsmenu-mobile">Habilidades</a>
-            <a id="xpmenu-mobile">Qualificação</a>
-            <a id="projmenu-mobile">Projetos</a>
+    <!-- menu mobile -->
+    <div class="menu-mobile">
+        <a id="aboutmenu-mobile">Sobre mim</a>
+        <a id="skillsmenu-mobile">Habilidades</a>
+        <a id="xpmenu-mobile">Qualificação</a>
+        <a id="projmenu-mobile">Projetos</a>
+    </div>
+
+    <!--Primeiro Bloco-->
+    <section class="wrapper" id="home">
+
+        <!--apresentação-->
+        <div class="wrapper-profile">
+            <div class="profile">
+                <div>
+                    <h1>RODRIGO RODRIGUES</h1>
+                    <p class="subtitle">Desenvolvedor Front-End | ReactJS </p>
+                    <!-- social icons -->
+                    <div class="contato">
+                        <div class="divIcons">
+                            <div class="contatoIcon">
+                                <a href="https://github.com/RodriGo-0990" target="blank"> <img src="./img/github.svg"
+                                        alt="github-icon" title="Github"></a>
+                            </div>
+                            <div class="contatoIcon">
+                                <a href="https://www.linkedin.com/in/rodrigo-madruga-rodrigues-7478491b3/"
+                                    target="blank">
+                                    <img src="./img/linkedin.svg" alt="Linkedin-icon" title="Linkedin"></a>
+
+                            </div>
+                            <div class="contatoIcon">
+                                <a href="https://wa.me/5548998330229" target="blank">
+                                    <img src="./img/whats.svg" alt="whatsapp-icon" title="WhatsApp"></a>
+                            </div>
+                            <div class="contatoIcon">
+                                <a href="mailto:rodrigorodrigues0990@hotmail.com"><img src="./img/mail.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="download-div">
+                    <button class="download"><a download href="./pdf/Currículo.pdf"> Download CV</a>
+                    </button>
+                </div>
+            </div>
+            <div class="image-profile">
+                <div class="card-foto">
+                    <img src="./img/perfil.png">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--fim do primeiro bloco-->
+
+    <!--segundo bloco-->
+    <section class="wrapper" id="about">
+        <h1 id="title">Sobre mim</h1>
+        <div class="info">
+            <div class="image-profile-mobile" id="image-profile-mobile">
+                <div class="card-foto">
+                    <img src="./img/perfil.png">
+                </div>
+            </div>
+            <div class="texto">
+                <p>
+                    Sou formado em Análise e Desenvolvimento de sistemas,
+                    sempre tive interesse em trabalhar com desenvolvimento de games
+                    e design de interfaces.
+                    Atualmente, dedico meu tempo ao desenvolvimento de projetos
+                    Front-End, tanto para web quanto para mobile, utilizando principalmente ReactJS.
+                    Além disso, busco expandir meus conhecimentos para me tornar um
+                    profissional Fullstack, estudando tecnologias de Back-End e aprimorando habilidades em
+                    integração de sistemas.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!---fim do segundo bloco-->
+
+    <!--terceiro bloco-->
+    <section class="wrapper" id="skills">
+        <h1 id="title"> Habilidades</h1>
+        <div class="info">
+            <div class="skill-icons">
+                <div class="skill-icons-card">
+                    <h4>HTML</h4>
+                    <img id="html" src="img/html.svg" alt="HTML" title="HTML">
+                </div>
+                <div class="skill-icons-card">
+                    <h4>CSS</h4>
+                    <img id="css" src="img/css.svg" alt="CSS" title="CSS">
+                </div>
+                <div class="skill-icons-card">
+                    <h4>JAVASCRIPT</h4>
+                    <img id="js" src="img/js.svg" alt="JavaScript" title="JavaScript">
+                </div>
+                <div class="skill-icons-card">
+                    <h4>REACT</h4>
+                    <img id="react" src="img/biblioteca.png" alt="React" title="React">
+                </div>
+                <div class="skill-icons-card">
+                    <h4>NODE</h4>
+                    <img id="node" src="img/node.svg" alt="Node" title="Node">
+                </div>
+                <div class="skill-icons-card">
+                    <h4>FLUTTER</h4>
+                    <img id="flutter" src="img/flutter.svg" alt="Flutter" title="Flutter">
+                </div>
+                <div class="skill-icons-card">
+                    <h4>JAVA</h4>
+                    <img id="java" src="img/java.png" alt="Java" title="Java">
+                </div>
+                <div class="skill-icons-card">
+                    <h4>SQL</h4>
+                    <img id="sql" src="img/mysql.png" alt="SQL" title="SQL">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--fim do terceiro bloco-->
+
+    <!-- quarto bloco -->
+    <section class="wrapper" id="xp">
+        <h1 id="title">Qualificação</h1>
+        <div class="info">
+            <div class="wrapper-card-xp">
+                <div class="div-xp">
+                    <h2><img src="./img/job.svg"> Trabalhos</h2>
+                    <div class="card-xp">
+                        <div class="tittle-xp-card">
+                            <h3>Estágio Java</h3>
+                        </div>
+                        <div class="subtitle-xp-card">
+                            <p>Dataprev</p>
+                        </div>
+                        <div class="date-xp-card">
+                            <p><img src="./img/calendar.svg"> Junho/2021 - Junho/2023</p>
+                        </div>
+                    </div>
+                    <div class="card-xp">
+                        <div class="tittle-xp-card">
+                            <h3>Desenvolvedor Front-end</h3>
+                        </div>
+                        <div class="subtitle-xp-card">
+                            <p>Freelance</p>
+                        </div>
+                        <div class="date-xp-card">
+                            <p><img src="./img/calendar.svg"> Atualmente</p>
+                        </div>
+                    </div>
+                    <button class="download"><a download href="./pdf/Currículo.pdf"> Download CV </a>
+                    </button>
+                </div>
+                <div class="div-xp">
+                    <h2><img src="./img/school.svg"> Formação</h2>
+                    <div class="card-xp">
+                        <div class="tittle-xp-card">
+                            <h3>Análise e Desenvolvimento de Sistemas</h3>
+                        </div>
+                        <div class="subtitle-xp-card">
+                            <p>Senai-Florianópolis</p>
+                        </div>
+                        <div class="date-xp-card">
+                            <p><img src="./img/calendar.svg"> Novembro/2024</p>
+                        </div>
+                    </div>
+                    <div class="card-xp">
+                        <div class="tittle-xp-card">
+                            <h3>Curso Java Completo e POO</h3>
+                        </div>
+                        <div class="subtitle-xp-card">
+                            <p>Udemy</p>
+                        </div>
+                        <div class="date-xp-card">
+                            <p><img src="img/calendar.svg"> Novembro/2023</p>
+                        </div>
+                    </div>
+                    <div class="card-xp">
+                        <div class="tittle-xp-card">
+                            <h3>Inglês</h3>
+                        </div>
+                        <div class="subtitle-xp-card">
+                            <p>Avançado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- fim do quarto bloco -->
+
+    <!--quinto bloco-->
+    <section class="wrapper" id="projects">
+        <h1 id="title">Projetos</h1>
+        <div class="info">
+            <div class="wrapper-projects">
+
+                <div class="card" style="background-image: url(img/madro.png);" id="madro">
+                    <div class="texto-projeto">
+                        <h2>Madro Store</h2>
+                        <p>E-commerce</p>
+                    </div>
+                </div>
+
+                <div class="card" style="background-image: url(img/versa.png); background-position-y: -18px;"
+                    id="versa">
+                    <div class="texto-projeto">
+                        <h2>Prime Finance</h2>
+                        <p>Site Web</p>
+                    </div>
+                </div>
+
+                <div class="card" style="background-image: url(img/chess.png); background-position-y: -12px;"
+                    id="chess">
+                    <div class="texto-projeto">
+                        <h2>MiChess</h2>
+                        <p>Jogo de xadrez</p>
+                    </div>
+                </div>
+
+                <div class="card" style="background-image: url(img/mymoney.png);" id="mymoney">
+                    <div class="texto-projeto">
+                        <h2>MyMoney</h2>
+                        <p>Aplicativo mobile</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!--Primeiro Bloco-->
-        <section class="wrapper" id="home">
+    </section>
+    <!--fim do quinto bloco-->
 
-            <!--apresentação-->
-            <div class="wrapper-profile">
-                <div class="profile">
-                    <h1>RODRIGO RODRIGU<span>ES</span></h1>
-                    <p class="typing-effect"> &nbsp &nbsp &ltDESENVOLVEDOR FRONT-END/></p>
-                    <!-- redes -->
-                    <div class="divIcons">
-                        <div class="contatoIcon">
-                            <a href="https://github.com/RodriGo-0990" target="blank"> <img src="./img/github.svg"
-                                    alt="github-icon" title="Github"></a>
-                        </div>
-                        <div class="contatoIcon">
-                            <a href="https://www.instagram.com/rodrigo_rodrigues0990/" target="blank"> <img
-                                    src="./img/instagram.svg" alt="Instagram-icon" title="Instagram"></a>
-                        </div>
-                        <div class="contatoIcon">
-                            <a href="https://www.linkedin.com/in/rodrigo-madruga-rodrigues-7478491b3/" target="blank">
-                                <img src="./img/linkedin.svg" alt="Linkedin-icon" title="Linkedin"></a>
-
-                        </div>
-                        <div class="contatoIcon">
-                            <a href="https://wa.me/5548998330229" target="blank">
-                                <img src="./img/whats.svg" alt="whatsapp-icon" title="WhatsApp"></a>
-                        </div>
-                        <div class="contatoIcon">
-                            <a href="mailto:rodrigorodrigues0990@hotmail.com"><img src="./img/mail.png"></a>
-                        </div>
-                    </div>
-                    <div class="download-div">
-                        <button class="download"><a download href="./pdf/Currículo.pdf"> Download CV <span><img
-                                        src="./img/download.svg"></span></a>
-                        </button>
-                    </div>
+    <footer>
+        <div class="rodape">
+            <div>
+                <p>Entre em contato.</p>
+            </div>
+            <div class="divIcons">
+                <div class="contatoIcon">
+                    <a href="https://github.com/RodriGo-0990" target="blank"> <img src="./img/github.svg"
+                            alt="github-icon" title="Github"></a>
                 </div>
-                <div class="image-profile">
-                    <div class="card-foto">
-                        <img src="./img/perfil.png">
-                    </div>
+                <div class="contatoIcon">
+                    <a href="https://www.linkedin.com/in/rodrigo-madruga-rodrigues-7478491b3/" target="blank"> <img
+                            src="./img/linkedin.svg" alt="Linkedin-icon" title="Linkedin"></a>
+
+                </div>
+                <div class="contatoIcon">
+                    <a href="https://wa.me/5548998330229" target="blank">
+                        <img src="./img/whats.svg" alt="whatsapp-icon" title="WhatsApp"></a>
+                </div>
+                <div class="contatoIcon">
+                    <a href="mailto:rodrigorodrigues0990@hotmail.com"><img src="./img/mail.png"></a>
                 </div>
             </div>
-        </section>
-        <!--fim do primeiro bloco-->
+        </div>
+    </footer>
 
-        <!--segundo bloco-->
-        <section class="wrapper" id="about">
-            <h1 id="title">Sobre mim</h1>
-            <div class="info">
-                <div class="texto">
-                    <p>
-                        Formado em Análise e Desenvolvimento de sistemas,
-                        sempre tive interesse em trabalhar com desenvolvimento de games
-                        e design de interfaces intuitivas e atraentes.
-                        Atualmente, dedico meu tempo ao desenvolvimento de projetos
-                        Front-End, tanto para web quanto para mobile, aplicando boas práticas e buscando inovação.
-                        Além disso, busco expandir meus conhecimentos para me tornar um
-                        profissional Fullstack, estudando tecnologias de Back-End e aprimorando habilidades em
-                        integração de sistemas.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <!---fim do segundo bloco-->
-
-        <!--terceiro bloco-->
-        <section class="wrapper" id="skills">
-            <h1 id="title"> Habilidades</h1>
-            <div class="info">
-                <div class="skill-icons">
-                    <div class="skill-icons-card">
-                        <h4>HTML</h4>
-                        <img id="html" src="img/html.svg" alt="HTML" title="HTML">
-                    </div>
-                    <div class="skill-icons-card">
-                        <h4>CSS</h4>
-                        <img id="css" src="img/css.svg" alt="CSS" title="CSS">
-                    </div>
-                    <div class="skill-icons-card">
-                        <h4>JAVASCRIPT</h4>
-                        <img id="js" src="img/js.svg" alt="JavaScript" title="JavaScript">
-                    </div>
-                    <div class="skill-icons-card">
-                        <h4>REACT</h4>
-                        <img id="react" src="img/biblioteca.png" alt="React" title="React">
-                    </div>
-                    <div class="skill-icons-card">
-                        <h4>NODE</h4>
-                        <img id="node" src="img/node.svg" alt="Node" title="Node">
-                    </div>
-                    <div class="skill-icons-card">
-                        <h4>FLUTTER</h4>
-                        <img id="flutter" src="img/flutter.svg" alt="Flutter" title="Flutter">
-                    </div>
-                    <div class="skill-icons-card">
-                        <h4>JAVA</h4>
-                        <img id="java" src="img/java.png" alt="Java" title="Java">
-                    </div>
-                    <div class="skill-icons-card">
-                        <h4>SQL</h4>
-                        <img id="sql" src="img/mysql.png" alt="SQL" title="SQL">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--fim do terceiro bloco-->
-
-        <!-- quarto bloco -->
-        <section class="wrapper" id="xp">
-            <h1 id="title">Qualificação</h1>
-            <div class="info">
-                <div class="wrapper-card-xp">
-                    <div class="div-xp">
-                        <h2><img src="./img/job.svg"> Trabalhos</h2>
-                        <div class="card-xp">
-                            <div class="tittle-xp-card">
-                                <h3>Estágio Java</h3>
-                            </div>
-                            <div class="subtitle-xp-card">
-                                <p>Dataprev</p>
-                            </div>
-                            <div class="date-xp-card">
-                                <p><img src="./img/calendar.svg"> Junho/2021 - Junho/2023</p>
-                            </div>
-                        </div>
-                        <div class="card-xp">
-                            <div class="tittle-xp-card">
-                                <h3>Desenvolvedor Front-end</h3>
-                            </div>
-                            <div class="subtitle-xp-card">
-                                <p>Freelance</p>
-                            </div>
-                            <div class="date-xp-card">
-                                <p><img src="./img/calendar.svg"> Atualmente</p>
-                            </div>
-                        </div>
-                        <button class="download"><a download href="./pdf/Currículo.pdf"> Download CV <span><img
-                                        src="./img/download.svg"></span></a>
-                        </button>
-                    </div>
-                    <div class="div-xp">
-                        <h2><img src="./img/school.svg"> Formação</h2>
-                        <div class="card-xp">
-                            <div class="tittle-xp-card">
-                                <h3>Análise e Desenvolvimento de Sistemas</h3>
-                            </div>
-                            <div class="subtitle-xp-card">
-                                <p>Senai-Florianópolis</p>
-                            </div>
-                            <div class="date-xp-card">
-                                <p><img src="./img/calendar.svg"> Novembro/2024</p>
-                            </div>
-                        </div>
-                        <div class="card-xp">
-                            <div class="tittle-xp-card">
-                                <h3>Curso Java Completo e POO</h3>
-                            </div>
-                            <div class="subtitle-xp-card">
-                                <p>Udemy</p>
-                            </div>
-                            <div class="date-xp-card">
-                                <p><img src="img/calendar.svg"> Novembro/2023</p>
-                            </div>
-                        </div>
-                        <div class="card-xp">
-                            <div class="tittle-xp-card">
-                                <h3>Inglês</h3>
-                            </div>
-                            <div class="subtitle-xp-card">
-                                <p>Avançado</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- fim do quarto bloco -->
-
-        <!--quinto bloco-->
-        <section class="wrapper" id="projects">
-            <h1 id="title">Projetos</h1>
-            <div class="info">
-                <div class="wrapper-projects">
-
-                    <div class="card" style="background-image: url(img/madro.png);" id="madro">
-                        <div class="texto-projeto">
-                            <h2>Madro Store</h2>
-                            <p>E-commerce</p>
-                        </div>
-                    </div>
-
-                    <div class="card" style="background-image: url(img/versa.png); background-position-y: -18px;" id="versa">
-                        <div class="texto-projeto">
-                            <h2>Prime Finance</h2>
-                            <p>Site Web</p>
-                        </div>
-                    </div>
-
-                    <div class="card" style="background-image: url(img/chess.png); background-position-y: -12px;" id="chess">
-                        <div class="texto-projeto">
-                            <h2>MiChess</h2>
-                            <p>Jogo de xadrez</p>
-                        </div>
-                    </div>
-
-                    <div class="card" style="background-image: url(img/mymoney.png);" id="mymoney">
-                        <div class="texto-projeto">
-                            <h2>MyMoney</h2>
-                            <p>Aplicativo mobile</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-        <!--fim do quinto bloco-->
-
-        <footer>
-            <div class="rodape">
-                <div style="margin-bottom: 10px;">
-                    <p>Entre em contato.</p>
-                </div>
-                <div class="divIcons">
-                    <div class="contatoIcon">
-                        <a href="https://github.com/RodriGo-0990" target="blank"> <img src="./img/github.svg"
-                                alt="github-icon" title="Github"></a>
-                    </div>
-                    <div class="contatoIcon">
-                        <a href="https://www.instagram.com/rodrigo_rodrigues0990/" target="blank"> <img
-                                src="./img/instagram.svg" alt="Instagram-icon" title="Instagram"></a>
-                    </div>
-                    <div class="contatoIcon">
-                        <a href="https://www.linkedin.com/in/rodrigo-madruga-rodrigues-7478491b3/" target="blank"> <img
-                                src="./img/linkedin.svg" alt="Linkedin-icon" title="Linkedin"></a>
-
-                    </div>
-                    <div class="contatoIcon">
-                        <a href="https://wa.me/5548998330229" target="blank">
-                            <img src="./img/whats.svg" alt="whatsapp-icon" title="WhatsApp"></a>
-                    </div>
-                    <div class="contatoIcon">
-                        <a href="mailto:rodrigorodrigues0990@hotmail.com"><img src="./img/mail.png"></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
 
     <!-- MODAL -->
     <div class="modal">
