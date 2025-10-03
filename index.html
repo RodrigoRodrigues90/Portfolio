@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 
-    <title>Portfólio | Rodrigo Rodrigues</title>
+    <title>Portfolio | Rodrigo Rodrigues</title>
     <!--titulo da aba-->
 
     <!--imagem favicon-->
@@ -166,66 +166,62 @@
         <h1 id="title">Qualificação</h1>
         <div class="info">
             <div class="wrapper-card-xp">
-                <div class="div-xp">
-                    <h2><img src="./img/job.svg"> Trabalhos</h2>
-                    <div class="card-xp">
-                        <div class="tittle-xp-card">
-                            <h3>Estágio Java</h3>
-                        </div>
-                        <div class="subtitle-xp-card">
-                            <p>Dataprev</p>
-                        </div>
-                        <div class="date-xp-card">
-                            <p><img src="./img/calendar.svg"> Junho/2021 - Junho/2023</p>
-                        </div>
-                    </div>
-                    <div class="card-xp">
-                        <div class="tittle-xp-card">
-                            <h3>Desenvolvedor Front-end</h3>
-                        </div>
+
+                <div class="card-xp">
+                    <div class="title-xp-card">
+                        <h3>Desenvolvedor Front-end</h3>
                         <div class="subtitle-xp-card">
                             <p>Freelance</p>
                         </div>
                         <div class="date-xp-card">
-                            <p><img src="./img/calendar.svg"> Atualmente</p>
+                            <img src="./img/calendar.svg">
+                            <p> Atualmente</p>
                         </div>
                     </div>
-                    <button class="download"><a download href="./pdf/Currículo.pdf"> Download CV </a>
-                    </button>
-                </div>
-                <div class="div-xp">
-                    <h2><img src="./img/school.svg"> Formação</h2>
-                    <div class="card-xp">
-                        <div class="tittle-xp-card">
-                            <h3>Análise e Desenvolvimento de Sistemas</h3>
-                        </div>
-                        <div class="subtitle-xp-card">
-                            <p>Senai-Florianópolis</p>
-                        </div>
-                        <div class="date-xp-card">
-                            <p><img src="./img/calendar.svg"> Novembro/2024</p>
-                        </div>
-                    </div>
-                    <div class="card-xp">
-                        <div class="tittle-xp-card">
-                            <h3>Curso Java Completo e POO</h3>
-                        </div>
-                        <div class="subtitle-xp-card">
-                            <p>Udemy</p>
-                        </div>
-                        <div class="date-xp-card">
-                            <p><img src="img/calendar.svg"> Novembro/2023</p>
-                        </div>
-                    </div>
-                    <div class="card-xp">
-                        <div class="tittle-xp-card">
-                            <h3>Inglês</h3>
-                        </div>
-                        <div class="subtitle-xp-card">
-                            <p>Avançado</p>
-                        </div>
+                    <div class="description-xp-card">
+                        <p>Desenvolvimento de sites e aplicações web utilizando ReactJS, HTML, CSS e JavaScript.
+                            Criação de interfaces responsivas e otimizadas para diferentes dispositivos.
+                            Integração com APIs e serviços externos.
+                        </p>
                     </div>
                 </div>
+
+                <div class="card-xp">
+                    <div class="tittle-xp-card">
+                        <h3> Estágio Java</h3>
+                    </div>
+                    <div class="subtitle-xp-card">
+                        <p>Dataprev</p>
+                    </div>
+                    <div class="date-xp-card">
+                        <img src="./img/calendar.svg">
+                        <p> Junho/2021 - Junho/2023</p>
+                    </div>
+                    <div class="description-xp-card">
+                        <p>Atuação em testes unitários em Java. Manutenção de interfaces do sistema utilizando JSF(Java
+                            Server Faces), participando de entregas semanais em um ambiente ágil (Scrum).
+                        </p>
+                    </div>
+                </div>
+                <div class="card-xp">
+                    <div class="title-xp-card">
+                        <h3>Análise e Desenvolvimento de Sistemas</h3>
+                    </div>
+                    <div class="subtitle-xp-card">
+                        <p>Senai-Florianópolis</p>
+                    </div>
+                    <div class="date-xp-card">
+                        <img src="./img/calendar.svg">
+                        <p>Novembro/2024</p>
+                    </div>
+                    <div class="description-xp-card">
+                        <p>Formação técnica em Análise e Desenvolvimento de Sistemas, com foco em desenvolvimento de
+                            software, banco de dados e metodologias ágeis.
+                        </p>
+                    </div>
+                </div>
+                <button class="download"><a download href="./pdf/Currículo.pdf"> Download CV </a>
+                </button>
             </div>
         </div>
     </section>
@@ -236,39 +232,65 @@
         <h1 id="title">Projetos</h1>
         <div class="info">
             <div class="wrapper-projects">
-
-                <div class="card" style="background-image: url(img/madro.png);" id="madro">
-                    <div class="texto-projeto">
-                        <h2>Madro Store</h2>
-                        <p>E-commerce</p>
+                <div class="card">
+                    <div class="image-project">
+                        <img src="./img/madro.png" alt="Madro Store Logo">
+                    </div>
+                    <div class="wrapper-description-project">
+                        <div class="title-project">
+                            <h2>Madro Store</h2>
+                            <p>E-commerce</p>
+                        </div>
+                        <div class="description-project">
+                            <p>E-commerce em desenvolvimento, utilizando ReactJs para construção de componentes, Redux
+                                para
+                                armazenamento de estado, o framework Express.js para requisições à API dos Correios para
+                                cálculo de fretes, e Api do Bing ERP para gerenciamento de estoque.</p>
+                        </div>
+                    </div>
+                    <div class="buttons-project">
+                        <button class="demo"><a href="https://rodrigorodrigues90.github.io/Madro-Store/"
+                                target="_blank">Ver
+                                Projeto</a>
+                        </button>
+                        <button class="code"><a href="https://github.com/rodrigorodrigues90/Madro-Store"
+                                target="_blank">Ver
+                                Repositorio</a>
+                        </button>
                     </div>
                 </div>
-
-                <div class="card" style="background-image: url(img/versa.png); background-position-y: -18px;"
-                    id="versa">
-                    <div class="texto-projeto">
-                        <h2>Prime Finance</h2>
-                        <p>Site Web</p>
+                <div class="card">
+                    <div class="image-project">
+                        <img src="./img/versa.png" alt="Prime Consultoria Logo">
                     </div>
-                </div>
-
-                <div class="card" style="background-image: url(img/chess.png); background-position-y: -12px;"
-                    id="chess">
-                    <div class="texto-projeto">
-                        <h2>MiChess</h2>
-                        <p>Jogo de xadrez</p>
+                    <div class="wrapper-description-project">
+                        <div class="title-project">
+                            <h2>Prime Consultoria</h2>
+                            <p>Site Institucional</p>
+                        </div>
+                        <div class="description-project">
+                            <p>Site de uma empresa fictícia de consultoria financeira empresarial, com design de
+                                interface
+                                inspirado em sites de empresas do setor. O projeto está em desenvolvimento com ReactJs
+                                na
+                                criação de componentes reutilizáveis, faltando implementar apenas algumas seções do
+                                site.
+                            </p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="card" style="background-image: url(img/mymoney.png);" id="mymoney">
-                    <div class="texto-projeto">
-                        <h2>MyMoney</h2>
-                        <p>Aplicativo mobile</p>
+                    <div class="buttons-project">
+                        <button class="demo"><a href="https://rodrigorodrigues90.github.io/Prime-Finance/"
+                                target="_blank">Ver
+                                Projeto</a>
+                        </button>
+                        <button class="code"><a href="https://github.com/rodrigorodrigues90/Prime-finance"
+                                target="_blank">Ver
+                                Repositorio</a>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
     <!--fim do quinto bloco-->
 
@@ -297,24 +319,6 @@
             </div>
         </div>
     </footer>
-
-
-    <!-- MODAL -->
-    <div class="modal">
-        <span class="close"> <img src="./img/close_menu.svg"></span>
-        <div class="modal-content">
-            <div class="modal-content-text">
-                <h1 id="modal-title" style="margin-bottom: 10px;">Titulo</h1>
-                <p id="modal-description">Descrição</p>
-            </div>
-            <div class="buttons-modal">
-                <a id="github-modal-button" href="" target="_blank" class="button-link"></a>
-                <a id="project-modal-button" href="" target="_blank" class="button-link"></a>
-                <button id="close-modal">Fechar</button>
-            </div>
-        </div>
-    </div>
-    <!-- FIM MODAL -->
 </body>
 
 </html>
