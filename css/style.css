@@ -319,6 +319,7 @@ nav {
 @media(width < 750px) {
     .texto {
         padding: 1em;
+        width:90%;
         font-size: 15px;
     }
 }
@@ -509,6 +510,11 @@ h4 {
     width: 400px;
     background-color: #000000be;
     cursor: pointer;
+}
+@media(max-width: 512px){
+    .card{
+        width:90%;
+    }
 }
 
 .card:hover {
