@@ -319,7 +319,6 @@ nav {
 @media(width < 750px) {
     .texto {
         padding: 1em;
-        width: 90%;
         font-size: 15px;
     }
 }
@@ -457,6 +456,9 @@ h4 {
 @media(max-width: 540px) {
     .date-xp-card p {
         font-size: small;
+    }
+    .card-xp{
+        width:90%;
     }
 }
 
