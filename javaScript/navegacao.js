@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let skills = document.getElementById('skillsmenu');
     let xp = document.getElementById('xpmenu');
     let projects = document.getElementById('projmenu');
+    let aboutbutton = document.getElementById('saibamais');
 
     //menu-mobile
     let hamburguer_icon = document.querySelector(".hamburguer-menu");
@@ -52,7 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
     projects.addEventListener("click", function () {
         movePage(4);
     });
-   
+    aboutbutton.addEventListener("click", function() {
+        movePage(1);
+    })
 
     //listeners to mobile
     about_mobile.addEventListener("click", function () {
