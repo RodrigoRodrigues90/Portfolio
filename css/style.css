@@ -297,6 +297,16 @@ nav {
     display: none;
     margin-bottom: .8em;
 }
+.download-div{
+    display: flex;
+    gap: 1em;
+}
+@media (max-width:512px){
+    .download-div{
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 /* segundo bloco */
 .texto {
@@ -456,6 +466,9 @@ h4 {
 @media(max-width: 540px) {
     .date-xp-card p {
         font-size: small;
+    }
+    .card-xp {
+        width: 98%;
     }
 }
 
