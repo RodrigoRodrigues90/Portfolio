@@ -584,6 +584,26 @@ h4 {
     gap: 1em;
     justify-content: left;
 }
+.btn-project{
+    width: 100px;
+    background-color: white;
+    padding: 4px;
+    border-radius: 15em;
+    cursor: pointer;
+    margin: 0;
+    text-decoration: none;
+    color: black; 
+    font-size: 14px;
+    font-family: inter-title; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px 1px #a9a9c5bb;
+}
+.btn-project:hover{
+    background-color: #b7b8ba;
+    transition: .5s;
+}
 
 .card h2 {
     margin-bottom: 4px;
