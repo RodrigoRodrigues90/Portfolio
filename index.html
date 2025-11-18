@@ -1,385 +1,139 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content=" width = device-width">
-    <script src="./javaScript/navegacao.js" defer></script>
-    <script src="./javaScript/modal.js" defer></script>
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodrigo Rodrigues | Desenvolvedor Web & Designer UI/UX</title>
     <link rel="stylesheet" href="./css/style.css">
-
-    <title>Portifólio | Rodrigo Rodrigues</title>
-    <!--titulo da aba-->
-
-    <!--imagem favicon-->
-    <link rel="icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>RODRIGO RODRIGUES</h1>
+            <h2>Desenvolvedor Web | Designer UI/UX</h2>
+            <div class="social-icons">
+                <a href="#" class="cta-button">LinkedIn</a>
 
+                <a href="#" class="cta-button">GitHub</a>
 
-    <!--cabeçalho-->
-    <header>
-        <div class="hamburguer-menu">
-            <div class="hamburguer-menu-before"></div>
-            <div class="meat"></div>
-            <div class="hamburguer-menu-after"></div>
+            </div>
+
         </div>
-        <nav>
-            <div class="portfolio" id="homemenu">
-                <h3>Portifólio</h3>
-            </div>
-            <!--menu-->
-            <div class="menu">
-                <a id="aboutmenu">Sobre mim</a>
-                <a id="skillsmenu">Habilidades</a>
-                <a id="xpmenu">Qualificação</a>
-                <a id="projmenu">Projetos</a>
-            </div>
-        </nav>
     </header>
+    <section class="next-section">
+        <div class="container">
+            <h2 class="section-title">Serviços</h2>
 
-    <!-- menu mobile -->
-    <div class="menu-mobile">
-        <a id="aboutmenu-mobile">Sobre mim</a>
-        <a id="skillsmenu-mobile">Habilidades</a>
-        <a id="xpmenu-mobile">Qualificação</a>
-        <a id="projmenu-mobile">Projetos</a>
-    </div>
-
-    <!--Primeiro Bloco-->
-    <section class="wrapper" id="home">
-
-        <!--apresentação-->
-        <div class="wrapper-profile">
-            <div class="profile">
-                <div>
-                    <h1>RODRIGO RODRIGUES</h1>
-                    <p class="subtitle">Desenvolvedor Front-End | ReactJS </p>
-                    <!-- social icons -->
-                    <div class="contato">
-                        <div class="divIcons">
-                            <div class="contatoIcon">
-                                <a href="https://github.com/RodriGo-0990" target="blank"> <img src="./img/github.svg"
-                                        alt="github-icon" title="Github"></a>
-                            </div>
-                            <div class="contatoIcon">
-                                <a href="https://www.linkedin.com/in/rodrigo-madruga-rodrigues-7478491b3/"
-                                    target="blank">
-                                    <img src="./img/linkedin.svg" alt="Linkedin-icon" title="Linkedin"></a>
-
-                            </div>
-                            <div class="contatoIcon">
-                                <a href="https://wa.me/5548998330229" target="blank">
-                                    <img src="./img/whats.svg" alt="whatsapp-icon" title="WhatsApp"></a>
-                            </div>
-                            <div class="contatoIcon">
-                                <a href="mailto:rodrigorodrigues0990@hotmail.com"><img src="./img/mail.png"></a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Criação de websites modernos, responsivos e otimizados, focados na experiência do usuário e
+                        performance.</p>
                 </div>
-                <div class="download-div">
-                    <button class="download"><a download href="./pdf/Currículo.pdf"> Download CV</a>
-                    </button>
-                    <button class="saibamais" id="saibamais"> Saiba mais
-                    </button>
+
+                <div class="service-card">
+                    <i class="fas fa-drafting-compass"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Estratégias de design centradas no usuário para interfaces intuitivas, belas e que geram
+                        conversão.</p>
                 </div>
-            </div>
-            <div class="image-profile">
-                <div class="card-foto">
-                    <img src="./img/perfil.png">
+
+                <div class="service-card">
+                    <i class="fas fa-desktop"></i>
+                    <h3>Design Responsivo</h3>
+                    <p>Garantia de que seu website funcione perfeitamente em qualquer dispositivo e tamanho de tela
+                        (mobile, tablet e desktop).</p>
                 </div>
             </div>
         </div>
     </section>
-    <!--fim do primeiro bloco-->
 
-    <!--segundo bloco-->
-    <section class="wrapper" id="about">
-        <h1 id="title">Sobre mim</h1>
-        <div class="info">
-            <div class="image-profile-mobile" id="image-profile-mobile">
-                <div class="card-foto">
-                    <img src="./img/perfil.png">
-                </div>
+    <section id="about" class="section about-me">
+        <h2>Sobre Mim</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptatum, animi molestiae veniam
+                    veritatis id quos quia eum corrupti sequi quibusdam vero rem quaerat error minima atque iusto? Iure,
+                    odit!</p>
             </div>
-            <div class="texto">
-                <p>
-                    Formado em Análise e Desenvolvimento de Sistemas, crio aplicações web e mobile com foco em UI/UX
-                    e design responsivo, utilizando principalmente ReactJs.
-                    Meu objetivo é entregar soluções de tecnologia que sejam tecnicamente sólidas e visualmente
-                    engajadoras.
-                </p>
+
+            <div class="about-image-container">
+                <img src="./img/perfil.png" alt="Foto de Perfil de Rodrigo Rodrigues" class="profile-photo">
             </div>
         </div>
     </section>
-    <!---fim do segundo bloco-->
 
-    <!--terceiro bloco-->
-    <section class="wrapper" id="skills">
-        <h1 id="title"> Habilidades</h1>
-        <div class="info">
-            <div class="skill-icons">
-                <div class="skill-icons-card">
-                    <h4>HTML</h4>
-                    <img id="html" src="img/html.svg" alt="HTML" title="HTML">
-                </div>
-                <div class="skill-icons-card">
-                    <h4>CSS</h4>
-                    <img id="css" src="img/css.svg" alt="CSS" title="CSS">
-                </div>
-                <div class="skill-icons-card">
-                    <h4>JAVASCRIPT</h4>
-                    <img id="js" src="img/js.svg" alt="JavaScript" title="JavaScript">
-                </div>
-                <div class="skill-icons-card">
-                    <h4>REACT</h4>
-                    <img id="react" src="img/biblioteca.png" alt="React" title="React">
-                </div>
-                <div class="skill-icons-card">
-                    <h4>NODE</h4>
-                    <img id="node" src="img/node.svg" alt="Node" title="Node">
-                </div>
-                <div class="skill-icons-card">
-                    <h4>FLUTTER</h4>
-                    <img id="flutter" src="img/flutter.svg" alt="Flutter" title="Flutter">
-                </div>
-                <div class="skill-icons-card">
-                    <h4>JAVA</h4>
-                    <img id="java" src="img/java.png" alt="Java" title="Java">
-                </div>
-                <div class="skill-icons-card">
-                    <h4>SQL</h4>
-                    <img id="sql" src="img/mysql.png" alt="SQL" title="SQL">
+    <section id="projects" class="section projects">
+        <h2>Meus Projetos</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="./img/mymoney.png" alt="Dashboard My Money">
+                <h4>Dashboard My Money</h4>
+                <p>Aplicativo de gestão financeira pessoal.</p>
+                <div class="project-links">
+                    <a href="URL_DO_REPOSITORIO" target="_blank" class="project-btn repo-btn">
+                        <i class="fab fa-github"></i> Repositório
+                    </a>
+                    <a href="URL_DO_SITE" target="_blank" class="project-btn site-btn">
+                        <i class="fas fa-external-link-alt"></i> Visitar Site
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
-    <!--fim do terceiro bloco-->
-
-    <!-- quarto bloco -->
-    <section class="wrapper" id="xp">
-        <h1 id="title">Qualificação</h1>
-        <div class="info">
-            <div class="wrapper-card-xp">
-
-                <div class="card-xp">
-                    <div class="title-xp-card">
-                        <h3>Desenvolvedor Front-end</h3>
-                        <div class="subtitle-xp-card">
-                            <p>Freelance</p>
-                        </div>
-                        <div class="date-xp-card">
-                            <img src="./img/calendar.svg">
-                            <p> Atualmente</p>
-                        </div>
-                    </div>
-                    <div class="description-xp-card">
-                        <p>Desenvolvimento de sites e aplicações web utilizando ReactJS, HTML, CSS e JavaScript.
-                            Criação de interfaces responsivas e otimizadas para diferentes dispositivos.
-                            Integração com APIs e serviços externos.
-                        </p>
-                    </div>
+            <div class="project-card">
+                <img src="./img/chess.png" alt="Chess Vs Stockfish">
+                <h4>Chess Vs Stockfish</h4>
+                <p>Jogue contra uma engine de xadrez em um nível desafiador.</p>
+                <div class="project-links">
+                    <a href="URL_DO_REPOSITORIO" target="_blank" class="project-btn repo-btn">
+                        <i class="fab fa-github"></i> Repositório
+                    </a>
+                    <a href="URL_DO_SITE" target="_blank" class="project-btn site-btn">
+                        <i class="fas fa-external-link-alt"></i> Visitar Site
+                    </a>
                 </div>
-
-                <div class="card-xp">
-                    <div class="tittle-xp-card">
-                        <h3> Estágio Java</h3>
-                    </div>
-                    <div class="subtitle-xp-card">
-                        <p>Dataprev</p>
-                    </div>
-                    <div class="date-xp-card">
-                        <img src="./img/calendar.svg">
-                        <p> Junho/2021 - Junho/2023</p>
-                    </div>
-                    <div class="description-xp-card">
-                        <p>Atuação em testes unitários em Java. Manutenção de interfaces do sistema utilizando JSF(Java
-                            Server Faces), participando de entregas semanais em um ambiente ágil (Scrum).
-                        </p>
-                    </div>
-                </div>
-                <div class="card-xp">
-                    <div class="title-xp-card">
-                        <h3>Análise e Desenvolvimento de Sistemas</h3>
-                    </div>
-                    <div class="subtitle-xp-card">
-                        <p>Senai-Florianópolis</p>
-                    </div>
-                    <div class="date-xp-card">
-                        <img src="./img/calendar.svg">
-                        <p>Novembro/2024</p>
-                    </div>
-                    <div class="description-xp-card">
-                        <p>Fundamentos de hardware e redes, algorítmos, análise de requisitos, programação orientada a
-                            objetos, banco de dados
-                            desenvolvimento web e mobile, desenvolvimento ágil, arquitetura de software, ingles técnico.
-                        </p>
-                    </div>
-                </div>
-                <button class="download"><a download href="./pdf/Currículo.pdf"> Download CV </a>
-                </button>
             </div>
-        </div>
-    </section>
-    <!-- fim do quarto bloco -->
-
-    <!--quinto bloco-->
-    <section class="wrapper" id="projects">
-        <h1 id="title">Projetos</h1>
-        <div class="info">
-            <div class="wrapper-projects">
-                <div class="card">
-                    <div class="image-project">
-                        <img src="./img/madro.png" alt="projeto Madro Store">
-                    </div>
-                    <div class="wrapper-description-project">
-                        <div class="title-project">
-                            <h2>Madro Store</h2>
-                            <p>E-commerce</p>
-                        </div>
-                        <div class="description-project">
-                            <p> Sistema em desenvolvimento utilizando ReactJs para construção de componentes reutilizáveis, 
-                                ligado à API dos Correios para cálculo de fretes, e Api do Bing ERP para gerenciamento de estoque.</p>
-                        </div>
-                    </div>
-                    <div class="buttons-project">
-                        <a class="btn-project" href="https://rodrigorodrigues90.github.io/Madro-Store/"
-                            target="_blank">
-                            <img style="width: 20px;" src="./img/web-button.svg">
-                            Acesse
-                        </a>
-                        <a class="btn-project" href="https://github.com/rodrigorodrigues90/Madro-Store"
-                            target="_blank">
-                            <img style="width: 20px;" src="./img/github-button.svg">
-                            Github
-                        </a>
-                    </div>
+            <div class="project-card">
+                <img src="./img/madro.png" alt="E-commerce Madro">
+                <h4>Madro E-commerce</h4>
+                <p>Loja virtual de joias e acessórios femininos.</p>
+                <div class="project-links">
+                    <a href="URL_DO_REPOSITORIO" target="_blank" class="project-btn repo-btn">
+                        <i class="fab fa-github"></i> Repositório
+                    </a>
+                    <a href="URL_DO_SITE" target="_blank" class="project-btn site-btn">
+                        <i class="fas fa-external-link-alt"></i> Visitar Site
+                    </a>
                 </div>
-                <div class="card">
-                    <div>
-
-                        <div class="image-project">
-                            <img src="./img/versa.png" alt="projeto Prime Finance">
-                        </div>
-                        <div class="wrapper-description-project">
-                            <div class="title-project">
-                                <h2>Prime Finance</h2>
-                                <p>Site Institucional</p>
-                            </div>
-                            <div class="description-project">
-                                <p> Site de uma empresa de consultoria financeira. O projeto foi desenvolvido com
-                                    ReactJs na criação de componentes reutilizáveis.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="buttons-project">
-                        <a class="btn-project" href="https://rodrigorodrigues90.github.io/Prime-Finance/"
-                            target="_blank">
-                            <img style="width: 20px;" src="./img/web-button.svg">
-                            Acesse
-                        </a>
-                        <a class="btn-project" href="https://github.com/rodrigorodrigues90/Prime-finance"
-                            target="_blank">
-                            <img style="width: 20px;" src="./img/github-button.svg">
-                            Github
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="image-project">
-                            <img src="./img/chess.png" alt="projeto chess">
-                        </div>
-                        <div class="wrapper-description-project">
-                            <div class="title-project">
-                                <h2>ChessVsStockfish</h2>
-                                <p>Jogo de xadrez</p>
-                            </div>
-                            <div class="description-project">
-                                <p> Jogue xadrez em um nível desafiador contra a engine Stockfish. Esse projeto foi desenvolvido em JavaScript.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="buttons-project">
-                        <a class="btn-project" href="https://rodrigorodrigues90.github.io/ChessVsStockfish/"
-                            target="_blank">
-                            <img style="width: 20px;" src="./img/web-button.svg">
-                            Acesse
-                        </a>
-                        <a class="btn-project" href="https://github.com/rodrigorodrigues90/Chess"
-                            target="_blank">
-                            <img style="width: 20px;" src="./img/github-button.svg">
-                            Github
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="image-project">
-                            <img src="./img/mymoney.png" alt="Projeto MyMoney">
-                        </div>
-                        <div class="wrapper-description-project">
-                            <div class="title-project">
-                                <h2>MyMoney</h2>
-                                <p>App Mobile</p>
-                            </div>
-                            <div class="description-project">
-                                <p> Aplicativo mobile de gestão financeira pessoal desenvolvido com Flutter. Utilizando
-                                    o
-                                    padrão de arquitetura MVC,
-                                    a aplicação ja está bem estruturada, integrando com um Back-end configurado em
-                                    Nest.js.
-                                    Uma demo do projeto estará disponível em breve.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                     <div class="buttons-project" >
-                        <a class="btn-project" style="pointer-events: none; opacity: 0.5;" href="">
-                            <img style="width: 20px;" src="./img/web-button.svg">
-                            Demo
-                        </a>
-                        <a class="btn-project" href="https://github.com/rodrigorodrigues90/MyMoney"
-                            target="_blank">
-                            <img style="width: 20px;" src="./img/github-button.svg">
-                            Github
-                        </a>
-                    </div>
+            </div>
+            <div class="project-card">
+                <img src="./img/versa.png" alt="Prime Finance Landing Page">
+                <h4>Prime Finance</h4>
+                <p>Landing page moderna de uma empresa de consultoria financeira empresarial.</p>
+                <div class="project-links">
+                    <a href="URL_DO_REPOSITORIO" target="_blank" class="project-btn repo-btn">
+                        <i class="fab fa-github"></i> Repositório
+                    </a>
+                    <a href="URL_DO_SITE" target="_blank" class="project-btn site-btn">
+                        <i class="fas fa-external-link-alt"></i> Visitar Site
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-    <!--fim do quinto bloco-->
 
     <footer>
-        <div class="rodape">
-            <div>
-                <p>Entre em contato.</p>
-            </div>
-            <div class="divIcons">
-                <div class="contatoIcon">
-                    <a href="https://github.com/RodriGo-0990" target="blank"> <img src="./img/github.svg"
-                            alt="github-icon" title="Github"></a>
-                </div>
-                <div class="contatoIcon">
-                    <a href="https://www.linkedin.com/in/rodrigo-madruga-rodrigues-7478491b3/" target="blank"> <img
-                            src="./img/linkedin.svg" alt="Linkedin-icon" title="Linkedin"></a>
-
-                </div>
-                <div class="contatoIcon">
-                    <a href="https://wa.me/5548998330229" target="blank">
-                        <img src="./img/whats.svg" alt="whatsapp-icon" title="WhatsApp"></a>
-                </div>
-                <div class="contatoIcon">
-                    <a href="mailto:rodrigorodrigues0990@hotmail.com"><img src="./img/mail.png"></a>
-                </div>
-            </div>
+        <p>&copy; 2024 Rodrigo Rodrigues. Todos os direitos reservados.</p>
+        <div class="social-icons">
+            <a href="SUA_URL_GITHUB" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="SUA_URL_LINKEDIN" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
         </div>
     </footer>
 </body>
