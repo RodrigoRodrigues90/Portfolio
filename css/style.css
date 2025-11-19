@@ -120,7 +120,7 @@ p {
 
     to {
         background-position: 500px 500px;
-        
+
     }
 }
 
@@ -153,7 +153,7 @@ p {
 
 .social-icons a {
     color: #ffffff;
-    font-size: 1em;
+    font-size: 1.3em;
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -184,7 +184,7 @@ p {
 .next-section {
     position: relative;
     min-height: 100vh;
-    padding: 80px 20px;
+    padding-top: 5em;
     color: #ecf0f1;
 }
 
@@ -204,7 +204,7 @@ p {
     display: flex;
     justify-content: space-around;
     gap: 30px;
-    flex-wrap: wrap;
+
 }
 
 .service-card {
@@ -225,20 +225,16 @@ p {
 
 .service-card h3 {
     color: #2980b9;
-    font-size: 1.5em;
     margin-bottom: 15px;
 }
 
-/* Estilo para ícones (Assumindo que você usará classes de ícone) */
 .service-card i {
     font-size: 3em;
     color: #8e44ad;
-    /* Cor roxa para destaque */
     margin-bottom: 15px;
     display: block;
 }
 
-/* Estilos de responsividade básica */
 @media (max-width: 768px) {
     .services-grid {
         flex-direction: column;
@@ -310,6 +306,26 @@ p {
     }
 }
 
+/* --- SEÇÃO DE SKILLS --- */
+.skills {
+    display: flex;
+    height: fit-content;
+    margin-bottom: 2em;
+
+}
+
+.skills i {
+    color: #8e44ad;
+    margin-left: 1.6em;
+    font-size: 4em;
+}
+
+.skills img {
+    margin-left: 5em;
+
+}
+
+
 /* SEÇÃO DE PROJETOS */
 .projects-grid {
     display: flex;
@@ -351,12 +367,13 @@ p {
     font-size: 0.9em;
     color: rgba(255, 255, 255, 0.7);
 }
+
 /* --- ESTILOS DOS BOTÕES DE PROJETO --- */
 .project-links {
     display: flex;
     justify-content: center;
     gap: 15px;
-    padding: 0 15px 25px; 
+    padding: 0 15px 25px;
 }
 
 .project-btn {
@@ -368,11 +385,12 @@ p {
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 8px; 
+    gap: 8px;
 }
 
 .repo-btn {
-    background-color: #333; /* Cor escura */
+    background-color: #333;
+    /* Cor escura */
     color: #f0f0f0;
     border: 1px solid #555;
 }
@@ -383,10 +401,8 @@ p {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Estilo para o botão Visitar Site (Demo) */
 .site-btn {
-    /* Usando uma das cores de destaque do seu tema (Ex: Azul) */
-    background-color: #292bb9; 
+    background-color: #292bb9;
     color: #ffffff;
     border: 1px solid #292bb9;
 }
@@ -394,7 +410,7 @@ p {
 .site-btn:hover {
     background-color: #3f41d3;
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(41, 43, 185, 0.4); /* Brilho azul */
+    box-shadow: 0 4px 10px rgba(41, 43, 185, 0.4);
 }
 
 /* RODAPÉ */
