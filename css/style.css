@@ -506,19 +506,14 @@ footer {
 /* RESPONSIVIDADE (MEDIA QUERIES) */
 @media (max-width: 768px) {
     .hero-content h1 {
-        font-size: 4em;
+        font-size: 3em;
     }
 
     .hero-content h2 {
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
 
     .section {
-        padding: 60px 4%;
-    }
-
-    /* Em telas pequenas, a grade de projetos fica com 1 coluna */
-    .projects-grid {
-        grid-template-columns: 1fr;
+        padding: 50px 4%;
     }
 }
