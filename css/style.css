@@ -5,6 +5,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Inter', sans-serif;
@@ -103,6 +106,45 @@ p {
     z-index: 0;
 }
 
+/* --- ÍCONE SCROLL DOWN --- */
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    /* Distância da borda inferior */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    /* Garante que fique acima de tudo no hero */
+    color: white;
+    font-size: 1.5em;
+    opacity: 0.8;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    /* Aplica a animação */
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translate(-50%, 0);
+        /* Posição normal */
+    }
+
+    40% {
+        transform: translate(-50%, -10px);
+        /* Move 10px para cima */
+    }
+
+    60% {
+        transform: translate(-50%, -5px);
+        /* Move 5px para cima */
+    }
+}
+
 @keyframes spinBackGround {
     from {
         transform: translate(-50%, -50%) rotate(0deg);
@@ -183,7 +225,6 @@ p {
 
 .next-section {
     position: relative;
-    min-height: 100vh;
     padding-top: 5em;
     color: #ecf0f1;
 }
@@ -204,6 +245,8 @@ p {
     display: flex;
     justify-content: space-around;
     gap: 30px;
+    height: fit-content;
+    margin-bottom: 3em;
 
 }
 
@@ -248,62 +291,78 @@ p {
 
 /* seção about */
 .about-me {
-    min-height: auto;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    padding: 80px 5%;
+    background-image: linear-gradient(#1a1a2ec4,
+            #1a1a2ee7),
+        url('../img/wallpapper_about.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .about-content {
     display: flex;
-    gap: 50px;
+    flex-direction: column;
+    gap: 10px;
     align-items: center;
-    justify-content: center;
-    max-width: 1100px;
-    margin: 40px auto 0;
+    max-width: 900px;
+}
+
+.about-image-container {
+    flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    order: 1;
+    padding: 10px;
+    margin-bottom: 1em;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+    border: 5px solid #1f2136;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .about-text {
-    text-align: left;
+    order: 2;
+    text-align: center;
+    max-width: 700px;
 }
 
 .about-text p {
     margin-bottom: 20px;
     max-width: 100%;
-    text-align: left;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.about-image-container {
-    flex-shrink: 0;
-    width: 350px;
-    overflow: hidden;
+.about-text p span {
+    display: inline-block;
 }
 
-.profile-photo {
-    width: 100%;
-    height: auto;
-}
-
-
-/* RESPONSIVIDADE PARA ABOUT ME */
 @media (max-width: 900px) {
-    .about-content {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .about-text {
-        order: 2;
-    }
-
     .about-image-container {
-        order: 1;
-        width: 80%;
-        max-width: 300px;
+        width: 200px;
+        height: 200px;
     }
 
-    .about-text p {
-        text-align: center;
-    }
+    .about-me {
+        background-image: linear-gradient(#1a1a2e9a,
+                #1a1a2e),
+            url('../img/wallpapper_about.png');
+        background-position: 0%;
+        }
 }
 
 /* --- SEÇÃO DE SKILLS --- */
@@ -327,10 +386,17 @@ p {
 
 
 /* SEÇÃO DE PROJETOS */
+.projects{
+     background-image: linear-gradient(#1a1a2e,
+            #1a1a2e9f),
+        url('../img/wallpapper_projects.jpg');
+    background-size: cover;
+    background-position: center;
+}
 .projects-grid {
     display: flex;
     justify-content: space-around;
-    gap: 30px;
+    gap: 15px;
     flex-wrap: wrap;
     margin-top: 4em;
 }
@@ -420,6 +486,21 @@ footer {
     background-color: #0f0f23;
     font-size: 0.8em;
     color: rgba(255, 255, 255, 0.5);
+}
+.section-divider {
+    width: 100%;
+    height: 50px; /* Altura do arco/curva */
+    background-color: #1a1a2e; /* Deve ser a mesma cor da seção abaixo */
+    position: relative;
+    z-index: 10;
+}
+
+.section-divider.top-curve {
+    /* CHAVE: Aplica o arco na parte superior do divisor */
+    border-top-left-radius: 50% 100px;
+    border-top-right-radius: 50% 100px;
+    /* Ajuste para fazer a cor de fundo da seção de cima vazar e criar o arco */
+    box-shadow: 0 -10px 0 0 #16162a; /* Cor da seção 'next-section' (Serviços) */
 }
 
 /* RESPONSIVIDADE (MEDIA QUERIES) */
