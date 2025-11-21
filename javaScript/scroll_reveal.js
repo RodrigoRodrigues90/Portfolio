@@ -1,14 +1,12 @@
 // Inicializa o ScrollReveal
 const sr = ScrollReveal({
     // Configuração padrão que será usada em todas as chamadas .reveal()
-    reset: true, 
-    duration: 2000, 
+    reset: true,  
 });
 sr.reveal('.scroll-down', {
     origin: 'top',
-    distance: '500px',
     duration: 800,
-    delay: 1500
+    delay: 1800
 })
 
 // --- Animação da Seção de Serviços e Skills (Cards) ---
@@ -34,7 +32,6 @@ sr.reveal('.about-image-container', {
 
 
 // --- Animação da Seção de Projetos ---
-// Animação para os cards de projeto: Slide-up e fade-in com atraso sequencial
 sr.reveal('.project-card', {
     origin: 'bottom',
     interval: 150, // Atraso entre o aparecimento de cada projeto
@@ -43,9 +40,17 @@ sr.reveal('.project-card', {
 });
 
 // --- Animação dos Títulos de Seção (Geral) ---
-// Faz com que os títulos apareçam com um pequeno fade-up
 sr.reveal('.section-title', { 
     origin: 'top', 
     distance: '20px', 
     duration: 800 
 });
+sr.reveal('.hero-content h1',{
+    origin:'bottom',
+    distance:'8px',
+    duration:2000
+})
+sr.reveal('.cta-button',{
+    
+    duration:1400
+})

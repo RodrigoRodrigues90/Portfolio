@@ -3,7 +3,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 /**
  * Função para dividir o texto de um elemento em spans para cada letra.
- * (Mantenha esta função no seu arquivo)
  */
 function splitTextIntoSpans(selector) {
     const element = document.querySelector(selector);
@@ -27,24 +26,19 @@ function splitTextIntoSpans(selector) {
 }
 
 // --- ANIMAÇÃO DE ENTRADA ESTILHAÇADA (SEÇÃO ABOUT ME) ---
-
-// 1. Divide o parágrafo em spans de letras
 const heroLetters = splitTextIntoSpans('.hero-content h2');
 
 if (heroLetters) {
-    // 2. Animação de Fade-In e Scale-in (Estilhaçada)
     gsap.from(heroLetters, {
         scrollTrigger: {
             trigger: ".hero-content h2",
             start: "top 85%", 
             toggleActions: "play none none none",
         },
-        // O efeito criativo:
-        opacity: 0, 
-        scale: 0.3, // Começa um pouco menor (zoom-in)
-        rotation: 'random(-10, 10)', // Começa levemente rotacionado (estilhaço)
+        delay:0.6,
+        opacity: 0, // Começa um pouco menor (zoom-in)
         stagger: 0.04, // Atraso pequeno para a chuva de letras
-        ease: "back.out(2)", // Efeito de salto acentuado no final
+        ease: "back.out(9)", // Efeito de salto acentuado no final
         
     });
 }
