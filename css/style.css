@@ -49,6 +49,7 @@ p {
 /* HEADER - HERO SECTION */
 .hero {
     height: 100vh;
+    height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,7 +76,7 @@ p {
 
 .hero::after {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -103,7 +104,7 @@ p {
         200px 200px,
         200px 200px;
     background-repeat: repeat;
-    animation: floatParticles 25s infinite linear;
+    animation: floatParticles 25s reverse infinite linear;
     z-index: 0;
 }
 
@@ -238,54 +239,7 @@ p {
     margin-bottom: 60px;
 }
 
-.next-section .container::after {
-    content: '';
-    position: absolute;
-    top: 10%;
-    right: 0;
-    width: 300px;
-    height: 300px;
-    border-radius: 100%;
-    border: 100px dashed #2ca7550e;
-    z-index: -1;
-    animation: spin 60s ease-out infinite;
-}
 
-.next-section .container::before {
-    content: '';
-    position: absolute;
-    top: 20%;
-    left: 5%;
-    width: 350px;
-    height: 350px;
-    border-radius: 100%;
-    border: 60px dashed #5a1c6617;
-    z-index: -1;
-    animation: spin 50s ease-out infinite;
-}
-
-.third-pseudo-class {
-    content: '';
-    position: absolute;
-    bottom: 10%;
-    right: 35%;
-    width: 350px;
-    height: 350px;
-    border-radius: 100%;
-    border: 50px dashed #297fb90c;
-    z-index: -1;
-    animation: spin 40s infinite ease-out reverse;
-}
-
-@media(max-width: 750px) {
-    .next-section .container::before {
-        top: 40%;
-    }
-
-    .third-pseudo-class {
-        bottom:0
-    }
-}
 
 @keyframes spin {
     to {
@@ -306,16 +260,46 @@ p {
 }
 
 .service-card {
+    position: relative;
+    width: 300px;
+    height: auto;   
+}
+.card-content {
+    width: 100%;
+    height: 100%;
+    padding: 2em;
     background-color: #1f2136;
     border: 1px solid #29b94d;
     border-radius: 12px;
-    padding: 2em;
-    width: 300px;
     box-shadow: 0 8px 20px #00000066;
     transition: transform 0.3s, box-shadow 0.3s;
+    position: relative; 
+    z-index: 1; 
+}
+.service-card::before{
+    content: '';
+    position: absolute;
+    top: -25%;
+    left: -20%;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    z-index: -1;
+    animation: spin 60s infinite;
+}
+#card1::before {
+    border: 60px dashed #2ca75511;
 }
 
-.service-card:hover {
+#card2::before {
+    border: 60px dashed #5a1c6621;
+    animation: spin 30s infinite reverse  ;
+}
+#card3::before {
+    border: 60px dashed #297fb911;
+}
+
+.card-content:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(41, 185, 77, 0.5);
 }
@@ -341,6 +325,9 @@ p {
     .services-grid {
         flex-direction: column;
         align-items: center;
+    }
+    #card2::before{
+        left: 20%;
     }
 }
 
@@ -424,7 +411,8 @@ p {
 .skills-container {
     height: fit-content;
     padding-bottom: 2em;
-    background-color: #120f2334;
+    background-color: #120f239f;
+    z-index: 999;
 
 }
 
@@ -563,4 +551,21 @@ footer {
     .section {
         padding: 50px 4%;
     }
+}
+/* rocket */
+/* No arquivo ./css/style.css */
+
+.rocket {
+    /* Remova qualquer position: fixed se existir */
+    position: absolute; /* ou relative */
+    left: 0;
+    top: 0;
+    z-index: 9; 
+    /* Garante que fique acima de outros elementos */
+}
+
+/* Garante que as outras seções também fiquem acima do foguete durante o scroll */
+.section {
+    position: relative; 
+    z-index: 10; 
 }
