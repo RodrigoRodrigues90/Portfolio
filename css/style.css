@@ -48,7 +48,6 @@ p {
 
 /* HEADER - HERO SECTION */
 .hero {
-    height: 100vh;
     height: 100dvh;
     display: flex;
     justify-content: center;
@@ -409,10 +408,12 @@ p {
 
 /* --- SEÇÃO DE SKILLS --- */
 .skills-container {
+    position: relative;
     height: fit-content;
     padding-bottom: 2em;
     background-color: #120f239f;
     z-index: 999;
+    overflow: hidden;
 
 }
 
@@ -552,19 +553,21 @@ footer {
         padding: 50px 4%;
     }
 }
-/* rocket */
-/* No arquivo ./css/style.css */
 
 .rocket {
-    /* Remova qualquer position: fixed se existir */
-    position: absolute; /* ou relative */
+    display: none;
+    position: absolute;
     left: 0;
     top: 0;
     z-index: 9; 
-    /* Garante que fique acima de outros elementos */
 }
-
-/* Garante que as outras seções também fiquem acima do foguete durante o scroll */
+.rocket2 {
+    display:none;
+    position: absolute; 
+    right: -50px;
+    top: 0;
+    z-index: 9; 
+}
 .section {
     position: relative; 
     z-index: 10; 

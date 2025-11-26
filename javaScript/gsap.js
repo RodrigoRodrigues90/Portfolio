@@ -36,8 +36,9 @@ if (heroLetters) {
 
 //referencias de elementos html
 const rocket = document.querySelector('.rocket');
+const rocket2 = document.querySelector('.rocket2');
 const heroTitle = document.querySelector('.hero-content h1');
-const skills = document.querySelector('.skills');
+const skills = document.querySelector('.skills-container');
 const footer = document.getElementById('footer');
 
 //(timeline)
@@ -61,16 +62,22 @@ function createRocketPathHero() {
     ];
 }
 function createRocketPathSkills() {
-    const W = skills.offsetWidth;
-    const L = skills.offsetLeft;
-    const skills_y = skills.clientHeight
+    const W = skills.offsetWidth + 100;
+    const L = skills.offsetLeft - 100;
+
     return [
-        { x: L , y: skills_y },
-        { x: W , y: skills_y },
+        { x: L, y: 0 },
+        { x: W , y: 1 },
     ];
 
 }
 function createRocketAnimation() {
+    window.onload = function() {
+        if (rocket && rocket2) {
+            rocket.style.display = 'block';
+            rocket2.style.display = 'block' // Mostra o foguete após o carregamento da página
+        }
+    }
 
     if (!rocket || !heroTitle) return;
 
@@ -85,6 +92,7 @@ function createRocketAnimation() {
             trigger: heroTitle,
             start: "top 80%",
             end: "bottom 80%",
+            invalidateOnRefresh: true,
             toggleActions: "play none none none",
         }
     });
@@ -97,7 +105,7 @@ function createRocketAnimation() {
             align: heroTitle,
             alignOrigin: [0.5, 0.5],
             autoRotate: 45,
-            ease: "power1.easeInOut"
+            ease: "power1.out"
         },
         scale: 1.3,
     }, 0);
@@ -114,32 +122,35 @@ function createRocketAnimation() {
 
 
 function rocketFlyingSkills() {
-    //  if (!rocket || !skills) return;
 
-    // const ANIMATION_DURATION = 8;
+    const ANIMATION_DURATION = 10;
 
-    // //trigger
-    // rocketTimelineSkills = gsap.timeline({
-    //     defaults: {
-    //         duration: ANIMATION_DURATION,
-    //         ease: "linear",
-    //     },
-    //     scrollTrigger: {
-    //         trigger: skills,
-    //         start:"top 50%",
-    //         toggleActions: "play none none none",
-    //     }
-    // });
-    // rocketTimelineSkills.set(rocket, { scale: 0.3, rotation: 230 }, 0);
+    //trigger
+    rocketTimelineSkills = gsap.timeline({
+        defaults: {
+            duration: ANIMATION_DURATION ,
+            ease: "power4.InOut",
+        },
+        scrollTrigger: {
+            trigger: skills,
+            start:"top 50%",
+            toggleActions: "play none none none",
+        }
+    });
 
-    // rocketTimelineSkills.to(rocket, {
-    //     motionPath: {
-    //         path: createRocketPathSkills(), //calcula o caminho
-    //         align: skills,
-    //         alignOrigin: [0.5, 0.5],
-    //         ease: "power1.easeInOut"
-    //     },
-    // }, 0);
+    rocketTimeline.set(rocket2, { scale: 0.1, rotation: 0 }, 0);
+
+    rocketTimelineSkills.from(rocket2, { 
+        motionPath: {
+            path: createRocketPathSkills(), 
+            align: skills,
+            alignOrigin: [0.5, 0.5],
+            autoRotate: 230,
+            ease: "power1.easeInOut"
+        },
+        scale: 0.2, 
+        rotation: 230,
+    }, 0);
 }
 
 createRocketAnimation();
