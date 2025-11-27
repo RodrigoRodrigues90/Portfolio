@@ -6,6 +6,13 @@
     box-sizing: border-box;
 }
 
+:root {
+    --particle-speed: 25s;
+    --gradient-circle: radial-gradient(circle at 0% 10%, #523940, transparent 60%),
+        radial-gradient(circle at 50% 100%, #155729, transparent 60%),
+        radial-gradient(circle at 100% 0%, #292bb9, transparent 70%);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -66,10 +73,7 @@ p {
     left: 50%;
     width: 250%;
     height: 250%;
-    background:
-        radial-gradient(circle at 0% 10%, #523940, transparent 60%),
-        radial-gradient(circle at 50% 100%, #155729, transparent 60%),
-        radial-gradient(circle at 100% 0%, #292bb9, transparent 70%);
+    background: var(--gradient-circle);
     animation: spinBackGround 10s infinite linear;
 }
 
@@ -103,7 +107,7 @@ p {
         200px 200px,
         200px 200px;
     background-repeat: repeat;
-    animation: floatParticles 25s reverse infinite linear;
+    animation: floatParticles var(--particle-speed) reverse infinite linear;
     z-index: 0;
 }
 
@@ -196,7 +200,6 @@ p {
 
 .social-icons a {
     color: #ffffff;
-    font-size: 1.3em;
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -208,6 +211,7 @@ p {
 .cta-button {
     text-decoration: none;
     font-weight: 600;
+    font-size: 1.2rem;
     border-radius: 50px;
     background: transparent;
     color: white;
@@ -220,6 +224,12 @@ p {
 .cta-button:hover {
     color: #fce38a;
     border: 2px solid #fce38a;
+}
+
+/* ---universe--- */
+.universe {
+    height: 100dvh;
+    background: transparent;
 }
 
 /* ---(SERVIÇOS) --- */
@@ -261,21 +271,22 @@ p {
 .service-card {
     position: relative;
     width: 300px;
-    height: auto;   
+    height: auto;
 }
+
 .card-content {
     width: 100%;
     height: 100%;
     padding: 2em;
     background-color: #1f2136;
-    border: 1px solid #29b94d;
+    border: 1px solid #088f08b2;
     border-radius: 12px;
     box-shadow: 0 8px 20px #00000066;
     transition: transform 0.3s, box-shadow 0.3s;
-    position: relative; 
-    z-index: 1; 
+    position: relative;
+    z-index: 1;
 }
-.service-card::before{
+.service-card::before {
     content: '';
     position: absolute;
     top: -25%;
@@ -286,14 +297,16 @@ p {
     z-index: -1;
     animation: spin 60s infinite;
 }
+
 #card1::before {
     border: 60px dashed #2ca75511;
 }
 
 #card2::before {
     border: 60px dashed #5a1c6621;
-    animation: spin 30s infinite reverse  ;
+    animation: spin 30s infinite reverse;
 }
+
 #card3::before {
     border: 60px dashed #297fb911;
 }
@@ -325,7 +338,8 @@ p {
         flex-direction: column;
         align-items: center;
     }
-    #card2::before{
+
+    #card2::before {
         left: 20%;
     }
 }
@@ -412,15 +426,15 @@ p {
     height: fit-content;
     padding-bottom: 2em;
     background-color: #120f239f;
-    z-index: 999;
     overflow: hidden;
-
+    z-index: 999;
 }
 
 .skills i {
     color: #8e44ad;
     margin-left: 1.6em;
     font-size: 4em;
+    z-index: 0;
 }
 
 .skills img {
@@ -453,23 +467,57 @@ p {
 }
 
 .project-card {
+    position: relative;
     max-width: 350px;
-    border: 1px solid #29b94d;
-    background-color: #1a1414;
+    padding: 3px; 
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
 }
+
+
+.project-card-content {
+    background-color: #1a1414;
+    width: 100%; 
+    height: 100%;
+    z-index: 1;
+    border-radius: inherit; 
+}
+
+.project-card::before {
+    background: var(--gradient-circle);
+    content: '';
+    position: absolute;
+    width:160%; 
+    height:150%;
+    right: 0;
+    bottom: 0;
+    top: -25%; 
+    left: -25%;     
+    z-index: -1; /* Coloca a borda atrás do conteúdo */
+    border-radius: 15px; 
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(41, 185, 77, 0.5);
 }
 
-.project-card img {
+.project-card-content img {
+    border-top-left-radius: 12px; 
+    border-top-right-radius: 12px;
     width: 100%;
-    height: 250px;
+    height: 230px;
     display: block;
 }
 
@@ -559,16 +607,18 @@ footer {
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 9; 
+    z-index: 9;
 }
+
 .rocket2 {
-    display:none;
-    position: absolute; 
+    display: none;
+    position: absolute;
     right: -50px;
     top: 0;
-    z-index: 9; 
+    z-index: 9;
 }
+
 .section {
-    position: relative; 
-    z-index: 10; 
+    position: relative;
+
 }

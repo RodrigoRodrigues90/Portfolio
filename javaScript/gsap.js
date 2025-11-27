@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, MotionPathPlugin);
 
 /**
  * Função para dividir o texto de um elemento em spans para cada letra.
@@ -31,7 +31,6 @@ if (heroLetters) {
     });
 }
 
-
 //=======ANIMAÇÕES DO FOGUETE=========//
 
 //referencias de elementos html
@@ -39,35 +38,47 @@ const rocket = document.querySelector('.rocket');
 const rocket2 = document.querySelector('.rocket2');
 const heroTitle = document.querySelector('.hero-content h1');
 const skills = document.querySelector('.skills-container');
+const universe = document.querySelector('.universe');
 const footer = document.getElementById('footer');
 
 //(timeline)
 let rocketTimeline;
 let rocketTimelineSkills;
+let rocketTimelineAccelerate;
 
 
 //Define os caminhos de movimento do foguete em varias seções
 function createRocketPathHero() {
     const W = heroTitle.offsetWidth;
     const L = heroTitle.offsetLeft;
+    const H = heroTitle.offsetHeight;
 
     const FINAL_X = (W / 2);
-    const FINAL_Y = 300;
+    const FINAL_Y = (H + 200);
 
     return [
-        { x: W, y: 20 },
-        { x: W - 10, y: -35 },
+        { x: W -100, y: 80 },
+        { x: W - 30, y: -35 },
         { x: L, y: -5 },
         { x: FINAL_X, y: FINAL_Y },
     ];
 }
+function createRocketPathAccelerate() {
+    const accelerate_universe = universe.getBoundingClientRect();
+    const heroRect = heroTitle.getBoundingClientRect();
+    
+    return [
+        { y: heroRect.bottom - accelerate_universe.top + 50 },
+        { y: accelerate_universe.height / 4  } 
+    ];
+}
 function createRocketPathSkills() {
-    const W = skills.offsetWidth + 100;
-    const L = skills.offsetLeft - 100;
+    const skills_rect = skills.getBoundingClientRect();
+    const W = skills_rect.right
+    const H = skills_rect.height;
 
     return [
-        { x: L, y: 0 },
-        { x: W , y: 1 },
+        { x: W + 50 , y: H / 4  },
     ];
 
 }
@@ -115,43 +126,55 @@ function createRocketAnimation() {
         duration: 0.5,
         repeat: -1,
         yoyo: true,
-        ease: "power1.easeInOut"
+        ease: "power4.in"
         // O parâmetro "+=0" garante que esta animação comece imediatamente APÓS o tween anterior terminar.
     }, "+=0");
+
+    
+}
+function rocketFlyingAccelerate() {
+     
 }
 
 
 function rocketFlyingSkills() {
 
-    const ANIMATION_DURATION = 10;
+    const ANIMATION_DURATION = 12;
 
     //trigger
     rocketTimelineSkills = gsap.timeline({
         defaults: {
-            duration: ANIMATION_DURATION ,
-            ease: "power4.InOut",
-        },
+            duration: ANIMATION_DURATION,
+           ease: "expo.in",
+        }, 
         scrollTrigger: {
             trigger: skills,
             start:"top 50%",
             toggleActions: "play none none none",
         }
     });
-
-    rocketTimeline.set(rocket2, { scale: 0.1, rotation: 0 }, 0);
-
+    
+    rocketTimeline.set(rocket2, { scale: 0.3, rotation: 0 }, 0);
+    
     rocketTimelineSkills.from(rocket2, { 
         motionPath: {
             path: createRocketPathSkills(), 
             align: skills,
-            alignOrigin: [0.5, 0.5],
+            alignOrigin: [0.5, 1.5],
             autoRotate: 230,
-            ease: "power1.easeInOut"
-        },
-        scale: 0.2, 
-        rotation: 230,
+        }
+        , scale: 0.2
     }, 0);
+    rocketTimelineSkills.to(rocket2, {
+        y: "-=4",
+        duration: 1,
+        repeat: -1,
+        yoyo: true,
+        ease: "power1.inOut",
+    }, 0);
+    
 }
 
 createRocketAnimation();
+rocketFlyingAccelerate();
 rocketFlyingSkills();
