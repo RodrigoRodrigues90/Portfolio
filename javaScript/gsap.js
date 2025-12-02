@@ -4,8 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let smoother = ScrollSmoother.create({
         wrapper: '#smooth-wrapper',
         content: '#smooth-content',
-        smooth: 2.5, // 2.5 é um bom valor de suavidade (smoothness)
-        smoothTouch: 3.5, // Suavidade para dispositivos touch
+        smooth: 2.5, // 1.5 é um bom valor de suavidade (smoothness)
+        effects: true,
+        smoothTouch: 1.5,
+
     });
     // Scroll para a seção de serviços ao clicar no botão "ver mais"
     let vermais = document.querySelector('.scroll-down');
@@ -13,9 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let rocket = document.querySelector('.rocket');
 
     rocket.addEventListener('click', () => {
-        smoother.scrollTo(0, true, "top top", 0.5);
+        smoother.scrollTo(0, true, "top top", 1.5);
     })
     vermais.addEventListener('click', () => {
-        smoother.scrollTo(servicos, true, "top top", 0.5);
+        smoother.scrollTo(servicos, true, "top top", 1.5);
     })
 });
