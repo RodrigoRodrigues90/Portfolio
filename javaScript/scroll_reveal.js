@@ -4,10 +4,15 @@ const sr = ScrollReveal({
     reset: true,  
 });
 sr.reveal('.scroll-down', {
-    origin: 'top',
     duration: 800,
-    delay: 1800
+    delay: 1500
 })
+sr.reveal('.rocket', {
+    origin: 'bottom',
+    distance: '20px',
+    duration: 1500,
+    delay: 1500
+});
 
 // --- Animação da Seção de Serviços e Skills (Cards) ---
 sr.reveal('.service-card', { 
@@ -49,6 +54,11 @@ sr.reveal('.hero-content h1',{
     origin:'bottom',
     distance:'8px',
     duration:2000
+})
+sr.reveal('.hero-content h2',{
+    origin:'left',
+    distance:'28px',
+    duration:2200
 })
 sr.reveal('.cta-button',{
     

@@ -13,11 +13,8 @@
         radial-gradient(circle at 100% 0%, #292bb9, transparent 70%);
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
+    position: relative;
     font-family: 'Inter', sans-serif;
     color: #f0f0f0;
     background-color: #1a1a2e;
@@ -224,12 +221,6 @@ p {
 .cta-button:hover {
     color: #fce38a;
     border: 2px solid #fce38a;
-}
-
-/* ---universe--- */
-.universe {
-    height: 100dvh;
-    background: transparent;
 }
 
 /* ---(SERVIÇOS) --- */
@@ -479,6 +470,9 @@ p {
 
 
 .project-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background-color: #1a1414;
     width: 100%; 
     height: 100%;
@@ -603,22 +597,11 @@ footer {
 }
 
 .rocket {
-    display: none;
+    /*display: none; <--- Removido para o foguete aparecer */
     position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 9;
-}
-
-.rocket2 {
-    display: none;
-    position: absolute;
-    right: -50px;
-    top: 0;
-    z-index: 9;
-}
-
-.section {
-    position: relative;
-
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%); /* Centraliza o foguete */
+    z-index: 1000; /* Garante que ele fique acima de tudo */
+    pointer-events: none; /* Não interfere em cliques */
 }
