@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         content: '#smooth-content',
         smooth: 2.5, // 1.5 é um bom valor de suavidade (smoothness)
         effects: true,
-        smoothTouch: 1, // Suavidade para dispositivos touch
+        smoothTouch: .8, // Suavidade para dispositivos touch
 
     });
     // Scroll para a seção de serviços ao clicar no botão "ver mais"
