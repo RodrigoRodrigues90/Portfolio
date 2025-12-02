@@ -277,6 +277,7 @@ p {
     position: relative;
     z-index: 1;
 }
+
 .service-card::before {
     content: '';
     position: absolute;
@@ -443,7 +444,7 @@ p {
 /* SEÇÃO DE PROJETOS */
 .projects {
     background-image: linear-gradient(#1a1a2e,
-            #1a1a2e9f),
+            #15241edc),
         url('../img/wallpapper_projects.jpg');
     background-size: cover;
     background-position: center;
@@ -460,7 +461,7 @@ p {
 .project-card {
     position: relative;
     max-width: 350px;
-    padding: 3px; 
+    padding: 3px;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
@@ -474,24 +475,25 @@ p {
     flex-direction: column;
     justify-content: space-around;
     background-color: #1a1414;
-    width: 100%; 
+    width: 100%;
     height: 100%;
     z-index: 1;
-    border-radius: inherit; 
+    border-radius: inherit;
 }
 
 .project-card::before {
     background: var(--gradient-circle);
     content: '';
     position: absolute;
-    width:160%; 
-    height:150%;
+    width: 160%;
+    height: 150%;
     right: 0;
     bottom: 0;
-    top: -25%; 
-    left: -25%;     
-    z-index: -1; /* Coloca a borda atrás do conteúdo */
-    border-radius: 15px; 
+    top: -25%;
+    left: -25%;
+    z-index: -1;
+    /* Coloca a borda atrás do conteúdo */
+    border-radius: 15px;
     animation: rotate 5s linear infinite;
 }
 
@@ -508,7 +510,7 @@ p {
 }
 
 .project-card-content img {
-    border-top-left-radius: 12px; 
+    border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     width: 100%;
     height: 230px;
@@ -574,11 +576,17 @@ p {
 
 /* RODAPÉ */
 footer {
+    position: relative;
     text-align: center;
     padding: 20px;
-    background-color: #0f0f23;
+    background-image: linear-gradient(#0a1013e8,
+            #070714be),
+        url('../img/wallpapper_about.png');
+    background-size: cover;
+    background-position: center;
     font-size: 0.8em;
     color: rgba(255, 255, 255, 0.5);
+    z-index: 999;
 }
 
 /* RESPONSIVIDADE (MEDIA QUERIES) */
@@ -595,13 +603,32 @@ footer {
         padding: 50px 4%;
     }
 }
-
 .rocket {
-    /*display: none; <--- Removido para o foguete aparecer */
     position: absolute;
-    left: 50%;
-    top: 85%;
-    transform: translate(-50%, -50%); /* Centraliza o foguete */
-    z-index: 1000; /* Garante que ele fique acima de tudo */
-    pointer-events: none; /* Não interfere em cliques */
+    top: -20%;
+    right: 0;  
+    transform: translate(-50%);
+    z-index: 999;
+    animation: bounce 2s infinite;
+    cursor: pointer;
 }
+.rocket-wrapper{
+    position: relative;
+}
+.rocket-wrapper::before{
+    content: 'Back to Top';
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    top: -10px;
+    left: -72px;
+    border-radius: 50px 50px 0px 50px;
+    padding: 2px;
+    color: black;
+    font-weight: 900;
+    background-color: rgb(135, 196, 214);
+    text-align: center;
+    line-height: 20px;
+
+}
+
