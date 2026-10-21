@@ -25,6 +25,7 @@
 }
 
 html {
+    overflow-x: clip;
     scroll-behavior: smooth;
     scroll-padding-top: calc(var(--header-h) + 16px);
 }
@@ -361,6 +362,7 @@ h3 {
     padding: 2.4rem;
 }
 
+/* Print dentro de uma moldura de navegador */
 .project-media {
     position: relative;
     display: block;
@@ -383,15 +385,21 @@ h3 {
     border-bottom: 1px solid var(--border);
 }
 
-.project-media img {
+.project-media img,
+.project-media video {
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 28px;
     width: 100%;
     height: calc(100% - 28px);
     object-fit: cover;
     object-position: top;
-    transition: transform 2.3s;
+    transition: transform .5s;
+}
+
+.project:hover .project-media img,
+.project:hover .project-media video {
+    transform: scale(1.03);
 }
 
 .project-body {
@@ -449,6 +457,7 @@ h3 {
     background: #ffc95c;
 }
 
+/* Faz o card inteiro ser clicável (leva para o site) */
 .link-primary::after {
     content: '';
     position: absolute;
@@ -589,7 +598,8 @@ h3 {
         order: -1;
         width: min(70%, 260px);
         justify-self: center;
-        left: -7px; /* compensa a moldura deslocada, para o conjunto ficar centralizado */
+        left: -7px;
+        /* compensa a moldura deslocada, para o conjunto ficar centralizado */
     }
 
     .projects {
@@ -644,4 +654,51 @@ h3 {
         opacity: 1;
         transform: none;
     }
+}
+
+/* ---------- GSAP ---------- */
+.progress {
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: 3px;
+    z-index: 60;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.w {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    padding-bottom: .12em;
+    margin-bottom: -.12em;
+}
+
+.wi {
+    display: inline-block;
+    will-change: transform;
+}
+
+/* quando o GSAP controla o movimento, o CSS não compete */
+.has-gsap .project,
+.has-gsap .project-media img,
+.has-gsap .project-media video,
+.has-gsap .btn {
+    transition-property: border-color, background, color;
+}
+
+.has-gsap .project:hover {
+    transform: none;
+}
+
+.has-gsap .project:hover .project-media img,
+.has-gsap .project:hover .project-media video {
+    transform: none;
+}
+
+/* print maior que a moldura: sobra espaço para o parallax */
+.has-gsap .project-media img {
+    top: calc(28px - 8%);
+    height: calc(100% - 28px + 16%);
 }

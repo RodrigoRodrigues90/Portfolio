@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rodrigo Rodrigues | Desenvolvedor Web e UI/UX</title>
     <meta name="description"
-    content="Portfólio de Rodrigo Rodrigues, desenvolvedor web com foco em interfaces claras, responsivas e bem construídas.">
+        content="Portfólio de Rodrigo Rodrigues, desenvolvedor web com foco em interfaces claras, responsivas e bem construídas.">
     <meta name="theme-color" content="#0b0f14">
-    <meta property="og:title" content="Rodrigo Rodrigues | Desenvolvedor Web e UI/UX">
-    <meta property="og:description" content="Interfaces claras, responsivas e bem construídas. Veja meus projetos.">
     <link rel="icon" href="./favicon.svg" type="image/svg+xml">
     <link rel="icon" href="./favicon.ico" sizes="48x48">
     <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    <meta property="og:title" content="Rodrigo Rodrigues | Desenvolvedor Web e UI/UX">
+    <meta property="og:description" content="Interfaces claras, responsivas e bem construídas. Veja meus projetos.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="./img/perfil.webp">
 
@@ -22,10 +22,10 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-
 </head>
 
 <body>
+    <div class="progress" aria-hidden="true"></div>
     <a class="skip-link" href="#projetos">Pular para os projetos</a>
 
     <header class="site-header">
@@ -50,8 +50,7 @@
                 <h1>Desenvolvedor web que transforma ideias em <span class="accent">interfaces claras</span>.</h1>
                 <p class="lead">
                     Crio sites e aplicações responsivas, do layout ao código. Meu foco é front-end e
-                    UI/UX, com atenção a performance, acessibilidade e detalhes que trazem personalidade ao produto
-                    final.
+                    UI/UX, com atenção a performance, acessibilidade e detalhes que fazem o produto parecer pronto.
                 </p>
                 <div class="hero-actions">
                     <a class="btn btn-primary" href="#projetos">Ver projetos</a>
@@ -59,8 +58,8 @@
                 </div>
             </div>
             <figure class="hero-photo">
-                <img src="./img/perfil.webp" width="640" height="681" alt="Foto de Rodrigo Rodrigues"
-                    fetchpriority="high">
+                <img src="./img/perfil.webp" width="640" height="681"
+                    alt="Foto de Rodrigo Rodrigues" fetchpriority="high">
             </figure>
         </section>
 
@@ -76,7 +75,12 @@
                 <article class="project" data-reveal>
                     <a class="project-media" href="https://rodrigorodrigues90.github.io/Madro-Store/" target="_blank"
                         rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="./img/madro.webp" width="960" height="600" loading="lazy" alt="">
+                        <video muted loop playsinline preload="none" width="960" height="600"
+                            poster="./img/madro-poster.webp"
+                            aria-label="Navegação pela loja Madro: destaques da coleção, categorias e rodapé">
+                            <source src="./video/madro.webm" type="video/webm">
+                            <source src="./video/madro.mp4" type="video/mp4">
+                        </video>
                     </a>
                     <div class="project-body">
                         <h3>Madro E-commerce</h3>
@@ -92,8 +96,7 @@
                                 target="_blank" rel="noopener">Ver projeto<span class="sr-only"> Madro E-commerce</span>
                                 <span aria-hidden="true">↗</span></a>
                             <a class="link-secondary" href="https://github.com/RodrigoRodrigues90/Madro-Store"
-                                target="_blank" rel="noopener">Código<span class="sr-only"> de Madro
-                                    E-commerce</span></a>
+                                target="_blank" rel="noopener">Código<span class="sr-only"> de Madro E-commerce</span></a>
                         </div>
                     </div>
                 </article>
@@ -101,12 +104,17 @@
                 <article class="project" data-reveal>
                     <a class="project-media" href="https://rodrigorodrigues90.github.io/Prime-Finance/" target="_blank"
                         rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="./img/prime-finance.webp" width="960" height="663" loading="lazy" alt="">
+                        <video muted loop playsinline preload="none" width="960" height="600"
+                            poster="./img/prime-finance-poster.webp"
+                            aria-label="Navegação pela landing page da Prime Finance">
+                            <source src="./video/prime-finance.webm" type="video/webm">
+                            <source src="./video/prime-finance.mp4" type="video/mp4">
+                        </video>
                     </a>
                     <div class="project-body">
                         <h3>Prime Finance</h3>
-                        <p>Landing page de uma empresa de consultoria financeira, com hierarquia visual forte criado com
-                            React.</p>
+                        <p>Landing page de uma consultoria financeira, com hierarquia visual forte e chamadas para ação
+                            em destaque.</p>
                         <ul class="tags" aria-label="Tecnologias">
                             <li>Landing page</li>
                             <li>UI/UX</li>
@@ -125,12 +133,16 @@
                 <article class="project" data-reveal>
                     <a class="project-media" href="https://rodrigorodrigues90.github.io/Ponto-Pro/" target="_blank"
                         rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="./img/ponto-pro.webp" width="960" height="598" loading="lazy" alt="">
+                        <video muted loop playsinline preload="none" width="960" height="600"
+                            poster="./img/ponto-pro-poster.webp"
+                            aria-label="Preenchimento de horários na calculadora Ponto Pro">
+                            <source src="./video/ponto-pro.webm" type="video/webm">
+                            <source src="./video/ponto-pro.mp4" type="video/mp4">
+                        </video>
                     </a>
                     <div class="project-body">
                         <h3>Ponto Pro</h3>
-                        <p>Calculadora de horas extras: o usuário lança entradas e saídas e vê o total de horas e o
-                            valor
+                        <p>Calculadora de horas extras: o usuário lança entradas e saídas e vê o total de horas e o valor
                             a receber, com exportação.</p>
                         <ul class="tags" aria-label="Tecnologias">
                             <li>JavaScript</li>
@@ -150,11 +162,16 @@
                 <article class="project" data-reveal>
                     <a class="project-media" href="https://rodrigorodrigues90.github.io/ChessFish/" target="_blank"
                         rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="./img/chessfish.webp" width="960" height="595" loading="lazy" alt="">
+                        <video muted loop playsinline preload="none" width="960" height="600"
+                            poster="./img/chessfish-poster.webp"
+                            aria-label="Partida de xadrez contra a engine Stockfish no ChessFish">
+                            <source src="./video/chessfish.webm" type="video/webm">
+                            <source src="./video/chessfish.mp4" type="video/mp4">
+                        </video>
                     </a>
                     <div class="project-body">
                         <h3>ChessFish</h3>
-                        <p>Jogue xadrez contra a engine Stockfish em diferentes níveis, do médio ao avançado.</p>
+                        <p>Jogue xadrez contra a engine Stockfish, escolhendo a cor das peças, direto no navegador.</p>
                         <ul class="tags" aria-label="Tecnologias">
                             <li>JavaScript</li>
                             <li>Stockfish</li>
@@ -173,12 +190,16 @@
                 <article class="project" data-reveal>
                     <a class="project-media" href="https://rodrigorodrigues90.github.io/Meet-the-meat/" target="_blank"
                         rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="./img/meet-the-meat.webp" width="960" height="584" loading="lazy" alt="">
+                        <video muted loop playsinline preload="none" width="960" height="600"
+                            poster="./img/meet-the-meat-poster.webp"
+                            aria-label="Mapa interativo dos cortes de carne no Meet the Meat">
+                            <source src="./video/meet-the-meat.webm" type="video/webm">
+                            <source src="./video/meet-the-meat.mp4" type="video/mp4">
+                        </video>
                     </a>
                     <div class="project-body">
                         <h3>Meet the Meat</h3>
-                        <p>Guia interativo dos cortes de carne bovina, com mapa clicável e informações sobre cada peça.
-                        </p>
+                        <p>Guia interativo dos cortes de carne bovina, com mapa clicável e informações de cada peça.</p>
                         <ul class="tags" aria-label="Tecnologias">
                             <li>HTML</li>
                             <li>CSS</li>
@@ -234,8 +255,9 @@
                 <h2>Vamos trabalhar juntos?</h2>
                 <p>Estou aberto a vagas e projetos freelance. O jeito mais rápido de falar comigo é pelo LinkedIn.</p>
                 <div class="hero-actions">
-                    <a class="btn btn-primary" href="https://www.linkedin.com/in/rodrigo-madruga-rodrigues-7478491b3/"
-                        target="_blank" rel="noopener">LinkedIn</a>
+                    <a class="btn btn-primary"
+                        href="https://www.linkedin.com/in/rodrigo-madruga-rodrigues-7478491b3/" target="_blank"
+                        rel="noopener">LinkedIn</a>
                     <a class="btn btn-ghost" href="https://github.com/RodrigoRodrigues90" target="_blank"
                         rel="noopener">GitHub</a>
                 </div>
@@ -250,6 +272,8 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
     <script src="./js/main.js" defer></script>
 </body>
 
