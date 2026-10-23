@@ -272,7 +272,16 @@ h3 {
     height: 8px;
     border-radius: 50%;
     background: #4ade80;
-    box-shadow: 0 0 0 4px rgba(74, 222, 128, .18);
+    box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.363);
+    animation: pulse-dot 2s infinite alternate;
+}
+@keyframes pulse-dot {
+  0% {
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0 5px rgba(16, 185, 129, 0.313);
+  }
 }
 
 .hero h1 {
@@ -378,15 +387,16 @@ h3 {
     height: 28px;
     z-index: 2;
     background:
-        radial-gradient(circle at 14px 50%, #ff5f57 4px, transparent 4.5px),
-        radial-gradient(circle at 30px 50%, #febc2e 4px, transparent 4.5px),
-        radial-gradient(circle at 46px 50%, #28c840 4px, transparent 4.5px),
-        #1b2531;
+    radial-gradient(circle at 14px 50%, #ff5f57 4px, transparent 4.5px),
+    radial-gradient(circle at 30px 50%, #febc2e 4px, transparent 4.5px),
+    radial-gradient(circle at 46px 50%, #28c840 4px, transparent 4.5px),
+    #1b2531;
     border-bottom: 1px solid var(--border);
 }
 
 .project-media img,
 .project-media video {
+    padding: 5px;
     position: absolute;
     left: 0;
     top: 28px;
