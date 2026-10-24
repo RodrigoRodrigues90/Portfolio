@@ -100,7 +100,7 @@ h3 {
 }
 
 h1 {
-    font-size: clamp(2.2rem, 5.2vw, 3.9rem);
+    font-size: clamp(2rem, 5.2vw, 3.9rem);
     font-weight: 700;
 }
 
@@ -645,6 +645,9 @@ h3 {
 
     .hero-actions {
         flex-direction: column;
+    }
+    .project-media{
+        aspect-ratio: 14 / 10;
     }
 }
 
